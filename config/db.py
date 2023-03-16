@@ -5,7 +5,8 @@ import os
 
 mongoURI= os.getenv("MONGO_URI")
 
-client = os.getenv("CLIENT_URL")
+client = MongoClient(mongoURI)
+
 # Connect to the MongoDB server
 db = client["discussion"]
 User = db["users"]
