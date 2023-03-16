@@ -5,7 +5,7 @@ from decouple import config
 import uvicorn
 import os
 
-CLIENT_URL = config("CLIENT_URL")
+CLIENT_URL = os.getenv("CLIENT_URL")
 
 
 
@@ -31,7 +31,7 @@ app.add_middleware(
 app.include_router(course)
 app.include_router(news)
 
-PORT = os.environ.get("PORT", 8000)
+PORT = os.getenv("PORT")
 # PORT = os.getenv("PORT", 8000)  # 8000 is the default port number
 
 

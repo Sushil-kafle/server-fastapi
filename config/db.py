@@ -1,10 +1,11 @@
 from pymongo import MongoClient
 from decouple import config
+import os
 
-mongoURI=config("MONGO_URI")
 
-client = MongoClient(mongoURI)
+mongoURI= os.getenv("MONGO_URI")
 
+client = os.getenv("CLIENT_URL")
 # Connect to the MongoDB server
 db = client["discussion"]
 User = db["users"]

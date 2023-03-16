@@ -8,6 +8,8 @@ from pydantic import Field
 
 
 
+
+
 course = APIRouter(
      prefix="/course",
     dependencies=[Depends(logged_in)],
