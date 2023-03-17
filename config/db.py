@@ -3,7 +3,7 @@ from decouple import config
 import os
 
 
-mongoURI= os.getenv("MONGO_URI")
+mongoURI= os.getenv("MONGO_URI",config("MONGO_URI"))
 
 client = MongoClient(mongoURI)
 

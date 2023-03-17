@@ -7,7 +7,7 @@ import os
 
 
 
-jwt_secret= os.getenv("JWT_SECRET")
+jwt_secret= os.getenv("JWT_SECRET",config("JWT_SECRET"))
 
 
 async def get_user(token: str = Cookie(default=None)):
