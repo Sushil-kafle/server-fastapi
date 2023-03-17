@@ -93,7 +93,7 @@ async def get_course(id:int=Field(le=50))->List[Course_Out]:
       raise HTTPException(status_code=404,detail=str(e))
 
 @course.get("/recommend")
-async def get_course(user:User=Depends(get_user))->list[Course_Out]:
+async def get_course(user:User=Depends(get_user))->List[Course_Out]:
    try:
       course = get_recommended_course(user)
       course = list( Course.find({"index":{ "$in":course}}))
