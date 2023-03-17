@@ -15,6 +15,7 @@ origins = [
     CLIENT_URL, 
     "https://www.lec-ithub.tech",
     "https://lec-ithub.tech",
+    "http://localhost:5173",
 ]
 
 
