@@ -13,7 +13,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 origins = [
     CLIENT_URL, 
-    "*"
+    "https://www.lec-ithub.tech",
+    "https://lec-ithub.tech",
 ]
 
 
