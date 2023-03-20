@@ -10,7 +10,7 @@ def scrape_from_mojo_auth():
 
     r= session.get(url)
 
-    r.html.render(sleep=1,scrolldown=1)
+    r.html.render(sleep=30,scrolldown=1)
 
     card = r.html.find('.card')
     # print(card)

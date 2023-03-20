@@ -11,7 +11,7 @@ def scrape_from_stack_overflow():
 
         res=session.get(url)
 
-        res.html.render(sleep=3,scrolldown=2)
+        res.html.render(sleep=30,scrolldown=2)
 
         section = res.html.find('article')
 

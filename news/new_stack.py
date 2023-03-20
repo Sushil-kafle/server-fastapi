@@ -8,7 +8,7 @@ def scrape_from_news_stack():
     news=[]
     r= session.get(url)
 
-    r.html.render(sleep=1,scrolldown=2)
+    r.html.render(sleep=30,scrolldown=2)
 
     card = r.html.find('.more-stories-row',first=True)
 

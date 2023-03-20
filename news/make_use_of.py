@@ -12,7 +12,7 @@ def scrape_from_make_use_of():
 
     res=session.get(url)
 
-    res.html.render(sleep=1,scrolldown=20)
+    res.html.render(sleep=20,scrolldown=20)
 
     section = res.html.find('.section-latest-news',first=True)
     article = section.find("article")

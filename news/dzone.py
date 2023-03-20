@@ -12,7 +12,7 @@ def scrape_from_dzone():
         url =f"https://dzone.com/coding/{p}"
         res=session.get(url)
 
-        res.html.render(sleep=3,scrolldown=2)
+        res.html.render(sleep=30,scrolldown=2)
 
 
 

@@ -10,7 +10,7 @@ def scrape_from_simplilearn():
 
         res=session.get(url)
 
-        res.html.render(sleep=2,scrolldown=3)
+        res.html.render(sleep=30,scrolldown=3)
 
         section = res.html.find('.card')
 

@@ -18,7 +18,7 @@ def scrape_from_developers_redhat():
 
 
 
-        res.html.render(sleep=1,scrolldown=2)
+        res.html.render(sleep=20,scrolldown=2)
         section = res.html.find('.rhd-c-card')
 
         for i in section:
