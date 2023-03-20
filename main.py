@@ -1,6 +1,5 @@
 from fastapi import FastAPI
-from routes.course import course
-from routes.news import news
+from routes.news import newsRouter
 from decouple import config
 import uvicorn
 import os
@@ -11,18 +10,13 @@ CLIENT_URL = os.getenv("CLIENT_URL",config("CLIENT_URL"))
 
 from fastapi.middleware.cors import CORSMiddleware
 
-origins = [
-    CLIENT_URL, 
-    "https://www.lec-ithub.tech",
-    "https://lec-ithub.tech",
-    "http://localhost:5173",
-]
+
 
 
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -30,8 +24,7 @@ app.add_middleware(
 
 
 
-app.include_router(course)
-app.include_router(news)
+app.include_router(newsRouter, prefix="/news")
 
 PORT = os.getenv("PORT",8000)
 

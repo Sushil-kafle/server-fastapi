@@ -16,7 +16,7 @@ from new_stack import scrape_from_news_stack
 # Connect to the MongoDB server
 
 
-mongoURI = os.getenv("MONGO_URI")
+mongoURI = os.getenv("MONGO_URI", config("MONGO_URI"))
 client = MongoClient(mongoURI)
 db = client["discussion"]
 News = db['news']
